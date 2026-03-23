@@ -129,13 +129,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="powsybl-6-bus-metrix-network" class="level2">
 <h2 class="anchored" data-anchor-id="powsybl-6-bus-metrix-network">PowSyBl 6-Bus Metrix Network</h2>
 <p>This is a small <strong>synthetic network</strong> built into PowSyBl for testing purposes. It has 6 buses, 2 HVDC links, and multiple generators with active power control extensions. Its compact size makes it ideal for quick experiments and understanding basic concepts (slack distribution, HVDC modelling, electrical islands).</p>
-<div id="6204b4d7" class="cell" data-execution_count="2">
+<div id="0e6150c6" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the 6-bus Metrix tutorial network (built into PowSyBl)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>net_six_buses <span class="op">=</span> get_six_buses()</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>lf_result <span class="op">=</span> run_lf(net_six_buses)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lf_result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Power Flow Execution Time: 0.004 s
+<pre><code>Power Flow Execution Time: 0.002 s
 Status: Converged, Iterations: 12, Distributed P: -93.89 MW
 ([ComponentResult(connected_component_num=0, synchronous_component_num=0, status=CONVERGED, status_text=Converged, iteration_count=12, reference_bus_id='SO_poste_0', slack_bus_results=[SlackBusResult(id='NE_poste_0', active_power_mismatch=-0.5761488466560882)], distributed_active_power=-93.88976925111695)], + demo
    + Load flow on network 'MetrixTutorialSixBuses'
@@ -172,11 +172,11 @@ Status: Converged, Iterations: 12, Distributed P: -93.89 MW
 </div>
 </div>
 <p>Use the interactive diagram below to explore the network topology. You can click on voltage levels, zoom in/out, and inspect individual elements:</p>
-<div id="9e21d812" class="cell" data-execution_count="3">
+<div id="b8371337" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>network_explorer(net_six_buses, sld_parameters<span class="op">=</span>sld_parameters, depth<span class="op">=</span><span class="dv">6</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="69">
+<div class="cell-output cell-output-display" data-execution_count="80">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id":"c97eb3f88aaa410b8815afecfa5653c2","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+{"model_id":"bb119b4c1e6540bcbd5682f4ba84787d","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
 </script>
 </div>
 </div>
@@ -193,7 +193,7 @@ Status: Converged, Iterations: 12, Distributed P: -93.89 MW
 <li>HVDC VSC converter stations</li>
 </ul>
 <p>This is our <strong>primary test grid</strong> throughout the load flow tutorial — small enough to run instantly, yet rich enough to demonstrate all PowSyBl features.</p>
-<div id="2045b2e8" class="cell" data-execution_count="4">
+<div id="be6e3743" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>net_microgrid_t4 <span class="op">=</span> get_microgrid_t4()</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substation count:"</span>, <span class="bu">len</span>(net_microgrid_t4.get_substations()))</span>
@@ -233,11 +233,11 @@ Status: Converged, Iterations: 10, Distributed P: -43.39 MW
 )</code></pre>
 </div>
 </div>
-<div id="e10d9ce4" class="cell" data-execution_count="5">
+<div id="6e8a8f83" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>network_explorer(net_microgrid_t4, sld_parameters<span class="op">=</span>sld_parameters, depth<span class="op">=</span><span class="dv">6</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="71">
+<div class="cell-output cell-output-display" data-execution_count="82">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id":"1b6e6f06657d4f92a7004ef69d943dc6","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+{"model_id":"eba54bc66110424896da6e1cda3b4f13","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
 </script>
 </div>
 </div>
@@ -246,7 +246,7 @@ Status: Converged, Iterations: 10, Distributed P: -43.39 MW
 <section id="entso-e-cgmes-real-grid-test-configuration" class="level2">
 <h2 class="anchored" data-anchor-id="entso-e-cgmes-real-grid-test-configuration">ENTSO-E CGMES Real Grid Test Configuration</h2>
 <p>This is a <strong>larger CGMES test grid</strong> published by ENTSO-E. Unlike the MicroGrid, it includes more substations and voltage levels, providing a more realistic representation of interconnected transmission systems. We load it with geographical import post-processing to enable map-based visualization.</p>
-<div id="81511681" class="cell" data-execution_count="6">
+<div id="d9ea2707" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>net_realgrid <span class="op">=</span> get_realgrid()</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substations:"</span>, <span class="bu">len</span>(net_realgrid.get_substations()))</span>
@@ -257,7 +257,7 @@ Status: Converged, Iterations: 10, Distributed P: -43.39 MW
 <div class="cell-output cell-output-stdout">
 <pre><code>Substations: 4791
 Voltage levels: 5577
-Power Flow Execution Time: 0.248 s
+Power Flow Execution Time: 0.258 s
 Status: Converged, Iterations: 5, Distributed P: 3.89 MW
 ([ComponentResult(connected_component_num=0, synchronous_component_num=0, status=CONVERGED, status_text=Converged, iteration_count=5, reference_bus_id='1533368947_VL_0', slack_bus_results=[SlackBusResult(id='259406610_VL_0', active_power_mismatch=-0.046561683280543775)], distributed_active_power=3.889670761585468)], + demo
    + Load flow on network 'urn:uuid:68fbee20-b975-11e3-a5e2-0800200c9a66'
@@ -276,11 +276,11 @@ Status: Converged, Iterations: 5, Distributed P: 3.89 MW
 )</code></pre>
 </div>
 </div>
-<div id="98694bdb" class="cell" data-execution_count="7">
+<div id="62e9dd8e" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>network_explorer(net_realgrid, sld_parameters<span class="op">=</span>sld_parameters, vl_id<span class="op">=</span><span class="st">"103127774_VL"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="73">
+<div class="cell-output cell-output-display" data-execution_count="84">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id":"e3f3a9b66f854ec291262295acbf2a30","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+{"model_id":"a8482136690c4e03b906866b5ae925b3","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
 </script>
 </div>
 </div>
@@ -290,7 +290,7 @@ Status: Converged, Iterations: 5, Distributed P: 3.89 MW
 <h2 class="anchored" data-anchor-id="relicapgrid-belgovia">ReliCapGrid Belgovia</h2>
 <p><strong>ReliCapGrid</strong> is a realistic synthetic grid developed by the GridFM consortium for benchmarking reliability and capacity assessment tools. The <strong>Belgovia IGM</strong> (Individual Grid Model) represents a fictional country’s transmission network in the CIM-CGMES format, complete with boundary data (BDS).</p>
 <p>This grid demonstrates PyPowSyBl’s ability to load CGMES Instance Files (XML) with separate boundary definitions — exactly how production-grade TSO data is exchanged in Europe via the ENTSO-E Operational Planning Data Environment (OPDE).</p>
-<div id="45f4b62c" class="cell" data-execution_count="8">
+<div id="a61f5f4d" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>igm_belgovia <span class="op">=</span> get_relicapgrid_belgovia()</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substations:"</span>, <span class="bu">len</span>(igm_belgovia.get_substations()))</span>
@@ -301,7 +301,7 @@ Status: Converged, Iterations: 5, Distributed P: 3.89 MW
 <div class="cell-output cell-output-stdout">
 <pre><code>Substations: 3
 Voltage levels: 7
-Power Flow Execution Time: 0.001 s
+Power Flow Execution Time: 0.002 s
 Status: Converged, Iterations: 6, Distributed P: 0.00 MW
 ([ComponentResult(connected_component_num=0, synchronous_component_num=0, status=CONVERGED, status_text=Converged, iteration_count=6, reference_bus_id='4ba71b59-ee2f-450b-9f7d-cc2f1cc5e386_0', slack_bus_results=[SlackBusResult(id='469df5f7-058f-4451-a998-57a48e8a56fe_0', active_power_mismatch=-0.6151346013972172)], distributed_active_power=0.0)], + demo
    + Load flow on network 'urn:uuid:15c8a8ad-08d5-4b59-8417-db80e273bd1a'
@@ -324,11 +324,11 @@ Status: Converged, Iterations: 6, Distributed P: 0.00 MW
 )</code></pre>
 </div>
 </div>
-<div id="a7640ec6" class="cell" data-execution_count="9">
+<div id="f1a3e87c" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>network_explorer(igm_belgovia, sld_parameters<span class="op">=</span>sld_parameters, depth<span class="op">=</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="75">
+<div class="cell-output cell-output-display" data-execution_count="86">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id":"8a6b1a3dbe3f4d3ca6f644f24ea36da0","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+{"model_id":"2fa98ae168924318a08f4de155e1e93f","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
 </script>
 </div>
 </div>
@@ -338,7 +338,7 @@ Status: Converged, Iterations: 6, Distributed P: 0.00 MW
 <h2 class="anchored" data-anchor-id="rte-6515-bus-network">RTE 6515-Bus Network</h2>
 <p>This is a <strong>large-scale Matpower test case</strong> representing a snapshot of the French RTE (Réseau de Transport d’Électricité) transmission grid with <strong>6,515 buses</strong>. It is loaded from a <code>.mat</code> file and includes phase tap changers that require a small fix (zeroing out the alpha at the current tap position) to avoid numerical issues.</p>
 <p>We use this grid in the load flow tutorial to benchmark solver performance (Newton-Raphson vs Newton-Krylov) on a realistically sized network.</p>
-<div id="512ae276" class="cell" data-execution_count="10">
+<div id="a04a3fbf" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>rte_6515 <span class="op">=</span> get_rte_6515()</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substations:"</span>, <span class="bu">len</span>(rte_6515.get_substations()))</span>
@@ -354,7 +354,7 @@ Status: Converged, Iterations: 6, Distributed P: 0.00 MW
 <div class="cell-output cell-output-stdout">
 <pre><code>Substations: 5343
 Voltage levels: 5343
-Power Flow Execution Time: 0.181 s
+Power Flow Execution Time: 0.229 s
 Status: Converged, Iterations: 5, Distributed P: -17.12 MW
 ([ComponentResult(connected_component_num=0, synchronous_component_num=0, status=CONVERGED, status_text=Converged, iteration_count=5, reference_bus_id='VL-4705_9', slack_bus_results=[SlackBusResult(id='VL-4705_9', active_power_mismatch=0.27900971511982675)], distributed_active_power=-17.119220681265524)], + demo
    + Load flow on network 'case6515rte'
@@ -374,11 +374,11 @@ Status: Converged, Iterations: 5, Distributed P: -17.12 MW
 )</code></pre>
 </div>
 </div>
-<div id="133a927e" class="cell" data-execution_count="11">
+<div id="78114a46" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>network_explorer(rte_6515, sld_parameters<span class="op">=</span>sld_parameters, depth<span class="op">=</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="77">
+<div class="cell-output cell-output-display" data-execution_count="88">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id":"e468b3830cd342e7842bd572a2ec0e70","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+{"model_id":"956845044f9248be8d7b9217d94a50bd","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
 </script>
 </div>
 </div>
