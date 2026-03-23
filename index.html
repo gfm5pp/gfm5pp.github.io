@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PyPowSyBl Tutorial — GridFM Workshop, Harvard 2026</title>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #1a3a5c;
+      color: #f0f4f8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-family: 'Rajdhani', 'Inter', system-ui, sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+
+    header p {
+      margin-top: 0.6rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      justify-content: center;
+      max-width: 860px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 1.4rem 1.8rem;
+      width: 240px;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .card:hover {
+      background: rgba(224,82,6,0.18);
+      border-color: #e05206;
+      transform: translateY(-3px);
+    }
+
+    .card .label {
+      font-family: 'Rajdhani', 'Inter', system-ui, sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.4;
+    }
+
+    .logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .logos img {
+      height: 36px;
+      width: auto;
+      opacity: 0.85;
+    }
+
+    .logos .sep {
+      width: 1px;
+      height: 28px;
+      background: rgba(255,255,255,0.2);
+    }
+
+    footer {
+      width: 100%;
+      padding: 1.2rem 0;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <header>
+      <h1>Hands-On Power System Analysis with PyPowSyBl</h1>
+      <p>GridFM Workshop &mdash; Harvard, March 2026</p>
+    </header>
+
+    <div class="grid">
+      <a class="card" href="00-setup.html" target="_blank" rel="noopener">
+        <span class="label">Setup & Introduction</span>
+      </a>
+      <a class="card" href="01-load-grids.html" target="_blank" rel="noopener">
+        <span class="label">Load Grids</span>
+      </a>
+      <a class="card" href="02-load-flow.html" target="_blank" rel="noopener">
+        <span class="label">Load Flow Analysis</span>
+      </a>
+    </div>
+
+    <div class="logos">
+      <img src="logos/powsybl-logo.svg" alt="PowSyBl">
+      <div class="sep"></div>
+      <img src="logos/artelys-logo-white.svg" alt="Artelys">
+    </div>
+  </div>
+
+  <footer>Youssouf Emine &mdash; GridFM / Artelys</footer>
+</body>
+</html>

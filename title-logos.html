@@ -1,0 +1,24 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var titleSlide = document.getElementById('title-slide');
+  if (titleSlide) {
+    var div = document.createElement('div');
+    div.className = 'title-logos';
+    div.innerHTML = '<img src="logos/powsybl-logo.svg" alt="PowSyBl"><img src="logos/artelys-logo-white.png" alt="Artelys">';
+    titleSlide.appendChild(div);
+  }
+
+  // Hide logo and footer on title slide
+  var deck = Reveal;
+  function toggleLogoFooter() {
+    var logo = document.querySelector('.slide-logo');
+    var footer = document.querySelector('.footer');
+    var isTitleSlide = Reveal.getCurrentSlide() && Reveal.getCurrentSlide().id === 'title-slide';
+    if (logo) logo.style.display = isTitleSlide ? 'none' : 'block';
+    if (footer) footer.style.display = isTitleSlide ? 'none' : 'block';
+  }
+
+  Reveal.on('ready', toggleLogoFooter);
+  Reveal.on('slidechanged', toggleLogoFooter);
+});
+</script>

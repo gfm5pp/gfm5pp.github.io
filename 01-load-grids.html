@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Test Grids Used in This Tutorial</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="01-load-grids_files/libs/clipboard/clipboard.min.js"></script>
+<script src="01-load-grids_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="01-load-grids_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="01-load-grids_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="01-load-grids_files/libs/quarto-html/popper.min.js"></script>
+<script src="01-load-grids_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="01-load-grids_files/libs/quarto-html/anchor.min.js"></script>
+<link href="01-load-grids_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="01-load-grids_files/libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="01-load-grids_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="01-load-grids_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="01-load-grids_files/libs/bootstrap/bootstrap-3ef3341192cdafd77c6642bc19087b08.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="docs-fonts.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-full toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#powsybl-6-bus-metrix-network" id="toc-powsybl-6-bus-metrix-network" class="nav-link" data-scroll-target="#powsybl-6-bus-metrix-network">PowSyBl 6-Bus Metrix Network</a></li>
+  <li><a href="#entso-e-cgmes-microgrid-t4" id="toc-entso-e-cgmes-microgrid-t4" class="nav-link" data-scroll-target="#entso-e-cgmes-microgrid-t4">ENTSO-E CGMES MicroGrid T4</a></li>
+  <li><a href="#entso-e-cgmes-real-grid-test-configuration" id="toc-entso-e-cgmes-real-grid-test-configuration" class="nav-link" data-scroll-target="#entso-e-cgmes-real-grid-test-configuration">ENTSO-E CGMES Real Grid Test Configuration</a></li>
+  <li><a href="#relicapgrid-belgovia" id="toc-relicapgrid-belgovia" class="nav-link" data-scroll-target="#relicapgrid-belgovia">ReliCapGrid Belgovia</a></li>
+  <li><a href="#rte-6515-bus-network" id="toc-rte-6515-bus-network" class="nav-link" data-scroll-target="#rte-6515-bus-network">RTE 6515-Bus Network</a></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content column-page-right" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Test Grids Used in This Tutorial</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Hands-On Power System Analysis with PyPowSyBl</p>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-right">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Throughout this tutorial, we work with several <strong>publicly available</strong> test grids of varying size and complexity. This section introduces each one, loads it into PyPowSyBl, runs a quick power flow to verify it works, and provides an interactive single-line diagram for exploration.</p>
+<p>These grids cover a range of real-world modelling scenarios — from a small didactic 6-bus network to a 6,500-bus French transmission grid — so you can observe how PyPowSyBl scales across different use cases.</p>
+<hr>
+</section>
+<section id="powsybl-6-bus-metrix-network" class="level2">
+<h2 class="anchored" data-anchor-id="powsybl-6-bus-metrix-network">PowSyBl 6-Bus Metrix Network</h2>
+<p>This is a small <strong>synthetic network</strong> built into PowSyBl for testing purposes. It has 6 buses, 2 HVDC links, and multiple generators with active power control extensions. Its compact size makes it ideal for quick experiments and understanding basic concepts (slack distribution, HVDC modelling, electrical islands).</p>
+<div id="6204b4d7" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the 6-bus Metrix tutorial network (built into PowSyBl)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>net_six_buses <span class="op">=</span> get_six_buses()</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>lf_result <span class="op">=</span> run_lf(net_six_buses)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lf_result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Power Flow Execution Time: 0.004 s
+Status: Converged, Iterations: 12, Distributed P: -93.89 MW
+([ComponentResult(connected_component_num=0, synchronous_component_num=0, status=CONVERGED, status_text=Converged, iteration_count=12, reference_bus_id='SO_poste_0', slack_bus_results=[SlackBusResult(id='NE_poste_0', active_power_mismatch=-0.5761488466560882)], distributed_active_power=-93.88976925111695)], + demo
+   + Load flow on network 'MetrixTutorialSixBuses'
+      + Network CC0 SC0
+         + Network info
+            Network has 6 buses and 13 branches
+            Network balance: active generation=1060.0 MW, active load=960.0 MW, reactive generation=0.0 MVar, reactive load=14.40000057220459 MVar
+            Angle reference bus: SO_poste_0
+            Slack bus: NE_poste_0
+         + Outer loop DistributedSlack
+            + Outer loop iteration 1
+               Slack bus active power (2.3599468439854054 MW) distributed in 1 distribution iteration(s)
+         + Outer loop ReactiveLimits
+            + Outer loop iteration 2
+               All PV buses should switch PQ, strongest one will stay PV: SO_poste_0
+               + 2 buses switched PV -&gt; PQ (1 buses remain PV)
+                  Switch bus 'SE_poste_0' PV -&gt; PQ, q=2296.3046631532434 &gt; maxQ=200.0
+                  Switch bus 'N_poste_0' PV -&gt; PQ, q=-260.4886088105696 &lt; minQ=-200.0
+            + Outer loop iteration 3
+               + 1 buses switched PQ -&gt; PV (0 buses blocked PQ due to the max number of switches)
+                  Switch bus 'N_poste_0' PQ -&gt; PV, q=minQ and v=404.64591283721916kV &lt; targetV=406.4500427246094kV
+            + Outer loop iteration 4
+               All PV buses should switch PQ, strongest one will stay PV: SO_poste_0
+               + 1 buses switched PV -&gt; PQ (1 buses remain PV)
+                  Switch bus 'N_poste_0' PV -&gt; PQ, q=775.354422658297 &gt; maxQ=200.0
+         + Outer loop DistributedSlack
+            + Outer loop iteration 5
+               Slack bus active power (-96.24971609510247 MW) distributed in 1 distribution iteration(s)
+         Outer loop ReactiveLimits
+         Outer loop DistributedSlack
+         Outer loop ReactiveLimits
+         AC load flow completed successfully (solverStatus=CONVERGED, outerloopStatus=STABLE)
+)</code></pre>
+</div>
+</div>
+<p>Use the interactive diagram below to explore the network topology. You can click on voltage levels, zoom in/out, and inspect individual elements:</p>
+<div id="9e21d812" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>network_explorer(net_six_buses, sld_parameters<span class="op">=</span>sld_parameters, depth<span class="op">=</span><span class="dv">6</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="69">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"c97eb3f88aaa410b8815afecfa5653c2","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+<hr>
+</section>
+<section id="entso-e-cgmes-microgrid-t4" class="level2">
+<h2 class="anchored" data-anchor-id="entso-e-cgmes-microgrid-t4">ENTSO-E CGMES MicroGrid T4</h2>
+<p>The <strong>MicroGrid Test Configuration T4</strong> is a standard test case published by ENTSO-E as part of the CGMES (Common Grid Model Exchange Standard) conformity assessment. It represents a small cross-border network with <strong>Belgium</strong> and <strong>Netherlands</strong> areas, including:</p>
+<ul>
+<li>Multiple voltage levels (110 kV, 220 kV, 380 kV)</li>
+<li>AC lines and transformers (2-winding and 3-winding)</li>
+<li>Generators, loads, shunt compensators, SVCs</li>
+<li>Phase and ratio tap changers</li>
+<li>HVDC VSC converter stations</li>
+</ul>
+<p>This is our <strong>primary test grid</strong> throughout the load flow tutorial — small enough to run instantly, yet rich enough to demonstrate all PowSyBl features.</p>
+<div id="2045b2e8" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>net_microgrid_t4 <span class="op">=</span> get_microgrid_t4()</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substation count:"</span>, <span class="bu">len</span>(net_microgrid_t4.get_substations()))</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Voltage level count:"</span>, <span class="bu">len</span>(net_microgrid_t4.get_voltage_levels()))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>lf_result <span class="op">=</span> run_lf(net_microgrid_t4)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lf_result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Substation count: 3
+Voltage level count: 11
+Power Flow Execution Time: 0.002 s
+Status: Converged, Iterations: 10, Distributed P: -43.39 MW
+([ComponentResult(connected_component_num=0, synchronous_component_num=0, status=CONVERGED, status_text=Converged, iteration_count=10, reference_bus_id='8d8a82ba-b5b0-4e94-861a-192af055f2b8_0', slack_bus_results=[SlackBusResult(id='469df5f7-058f-4451-a998-57a48e8a56fe_0', active_power_mismatch=-0.008383542589784215)], distributed_active_power=-43.38535063354483)], + demo
+   + Load flow on network 'urn:uuid:19d9a263-529d-4f6c-8221-3a8a45de347b+urn:uuid:96adadbe-902b-4cd6-9fc8-01a56ecbee79'
+      + Network CC0 SC0
+         + Network info
+            Network has 12 buses and 17 branches
+            Network balance: active generation=1098.4927010000001 MW, active load=987.0 MW, reactive generation=0.0 MVar, reactive load=660.0 MVar
+            Angle reference bus: 8d8a82ba-b5b0-4e94-861a-192af055f2b8_0
+            Slack bus: 469df5f7-058f-4451-a998-57a48e8a56fe_0
+         + Outer loop DistributedSlack
+            + Outer loop iteration 1
+               Slack bus active power (-42.302866235687986 MW) distributed in 1 distribution iteration(s)
+         + Outer loop ReactiveLimits
+            + Outer loop iteration 2
+               + 1 buses switched PV -&gt; PQ (4 buses remain PV)
+                  Switch bus 'd0486169-2205-40b2-895e-b672ecb9e5fc_0' PV -&gt; PQ, q=82.70122281142609 &gt; maxQ=10.404
+            + Outer loop iteration 3
+               1 buses blocked at a reactive limit have been adjusted because the reactive limit changed
+         + Outer loop DistributedSlack
+            + Outer loop iteration 4
+               Slack bus active power (-1.0824843978568734 MW) distributed in 1 distribution iteration(s)
+         Outer loop ReactiveLimits
+         Outer loop DistributedSlack
+         Outer loop ReactiveLimits
+         AC load flow completed successfully (solverStatus=CONVERGED, outerloopStatus=STABLE)
+)</code></pre>
+</div>
+</div>
+<div id="e10d9ce4" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>network_explorer(net_microgrid_t4, sld_parameters<span class="op">=</span>sld_parameters, depth<span class="op">=</span><span class="dv">6</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="71">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"1b6e6f06657d4f92a7004ef69d943dc6","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+<hr>
+</section>
+<section id="entso-e-cgmes-real-grid-test-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="entso-e-cgmes-real-grid-test-configuration">ENTSO-E CGMES Real Grid Test Configuration</h2>
+<p>This is a <strong>larger CGMES test grid</strong> published by ENTSO-E. Unlike the MicroGrid, it includes more substations and voltage levels, providing a more realistic representation of interconnected transmission systems. We load it with geographical import post-processing to enable map-based visualization.</p>
+<div id="81511681" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>net_realgrid <span class="op">=</span> get_realgrid()</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substations:"</span>, <span class="bu">len</span>(net_realgrid.get_substations()))</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Voltage levels:"</span>, <span class="bu">len</span>(net_realgrid.get_voltage_levels()))</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>lf_result <span class="op">=</span> run_lf(net_realgrid, use_reactive_limits<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lf_result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Substations: 4791
+Voltage levels: 5577
+Power Flow Execution Time: 0.248 s
+Status: Converged, Iterations: 5, Distributed P: 3.89 MW
+([ComponentResult(connected_component_num=0, synchronous_component_num=0, status=CONVERGED, status_text=Converged, iteration_count=5, reference_bus_id='1533368947_VL_0', slack_bus_results=[SlackBusResult(id='259406610_VL_0', active_power_mismatch=-0.046561683280543775)], distributed_active_power=3.889670761585468)], + demo
+   + Load flow on network 'urn:uuid:68fbee20-b975-11e3-a5e2-0800200c9a66'
+      + Network CC0 SC0
+         7 generators were discarded from voltage control because not started
+         + Network info
+            Network has 6051 buses and 8755 branches
+            Network balance: active generation=51698.81634700002 MW, active load=50725.113000000114 MW, reactive generation=47.998247000000006 MVar, reactive load=13461.174999999987 MVar
+            Angle reference bus: 1533368947_VL_0
+            Slack bus: 259406610_VL_0
+         + Outer loop DistributedSlack
+            + Outer loop iteration 1
+               Slack bus active power (3.8896707615839965 MW) distributed in 2 distribution iteration(s)
+         Outer loop DistributedSlack
+         AC load flow completed successfully (solverStatus=CONVERGED, outerloopStatus=STABLE)
+)</code></pre>
+</div>
+</div>
+<div id="98694bdb" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>network_explorer(net_realgrid, sld_parameters<span class="op">=</span>sld_parameters, vl_id<span class="op">=</span><span class="st">"103127774_VL"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="73">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"e3f3a9b66f854ec291262295acbf2a30","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+<hr>
+</section>
+<section id="relicapgrid-belgovia" class="level2">
+<h2 class="anchored" data-anchor-id="relicapgrid-belgovia">ReliCapGrid Belgovia</h2>
+<p><strong>ReliCapGrid</strong> is a realistic synthetic grid developed by the GridFM consortium for benchmarking reliability and capacity assessment tools. The <strong>Belgovia IGM</strong> (Individual Grid Model) represents a fictional country’s transmission network in the CIM-CGMES format, complete with boundary data (BDS).</p>
+<p>This grid demonstrates PyPowSyBl’s ability to load CGMES Instance Files (XML) with separate boundary definitions — exactly how production-grade TSO data is exchanged in Europe via the ENTSO-E Operational Planning Data Environment (OPDE).</p>
+<div id="45f4b62c" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>igm_belgovia <span class="op">=</span> get_relicapgrid_belgovia()</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substations:"</span>, <span class="bu">len</span>(igm_belgovia.get_substations()))</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Voltage levels:"</span>, <span class="bu">len</span>(igm_belgovia.get_voltage_levels()))</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>lf_result <span class="op">=</span> run_lf(igm_belgovia)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lf_result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Substations: 3
+Voltage levels: 7
+Power Flow Execution Time: 0.001 s
+Status: Converged, Iterations: 6, Distributed P: 0.00 MW
+([ComponentResult(connected_component_num=0, synchronous_component_num=0, status=CONVERGED, status_text=Converged, iteration_count=6, reference_bus_id='4ba71b59-ee2f-450b-9f7d-cc2f1cc5e386_0', slack_bus_results=[SlackBusResult(id='469df5f7-058f-4451-a998-57a48e8a56fe_0', active_power_mismatch=-0.6151346013972172)], distributed_active_power=0.0)], + demo
+   + Load flow on network 'urn:uuid:15c8a8ad-08d5-4b59-8417-db80e273bd1a'
+      + Network CC0 SC0
+         + Network info
+            Network has 16 buses and 17 branches
+            Network balance: active generation=131.7252 MW, active load=49.07404200000003 MW, reactive generation=0.0 MVar, reactive load=252.896328 MVar
+            Angle reference bus: 4ba71b59-ee2f-450b-9f7d-cc2f1cc5e386_0
+            Slack bus: 469df5f7-058f-4451-a998-57a48e8a56fe_0
+         Outer loop DistributedSlack
+         + Outer loop ReactiveLimits
+            + Outer loop iteration 1
+               + 1 buses switched PV -&gt; PQ (2 buses remain PV)
+                  Switch bus '69ef0dbd-da79-4eef-a02f-690cb8a28361_0' PV -&gt; PQ, q=-25.566081739797593 &lt; minQ=-9.808481427160494
+            + Outer loop iteration 2
+               1 buses blocked at a reactive limit have been adjusted because the reactive limit changed
+         Outer loop DistributedSlack
+         Outer loop ReactiveLimits
+         AC load flow completed successfully (solverStatus=CONVERGED, outerloopStatus=STABLE)
+)</code></pre>
+</div>
+</div>
+<div id="a7640ec6" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>network_explorer(igm_belgovia, sld_parameters<span class="op">=</span>sld_parameters, depth<span class="op">=</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="75">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"8a6b1a3dbe3f4d3ca6f644f24ea36da0","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+<hr>
+</section>
+<section id="rte-6515-bus-network" class="level2">
+<h2 class="anchored" data-anchor-id="rte-6515-bus-network">RTE 6515-Bus Network</h2>
+<p>This is a <strong>large-scale Matpower test case</strong> representing a snapshot of the French RTE (Réseau de Transport d’Électricité) transmission grid with <strong>6,515 buses</strong>. It is loaded from a <code>.mat</code> file and includes phase tap changers that require a small fix (zeroing out the alpha at the current tap position) to avoid numerical issues.</p>
+<p>We use this grid in the load flow tutorial to benchmark solver performance (Newton-Raphson vs Newton-Krylov) on a realistically sized network.</p>
+<div id="512ae276" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>rte_6515 <span class="op">=</span> get_rte_6515()</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substations:"</span>, <span class="bu">len</span>(rte_6515.get_substations()))</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Voltage levels:"</span>, <span class="bu">len</span>(rte_6515.get_voltage_levels()))</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>lf_result <span class="op">=</span> run_lf(</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  rte_6515,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  use_reactive_limits<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  use_defaults<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  component_mode<span class="op">=</span>lf.ComponentMode.MAIN_CONNECTED</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lf_result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Substations: 5343
+Voltage levels: 5343
+Power Flow Execution Time: 0.181 s
+Status: Converged, Iterations: 5, Distributed P: -17.12 MW
+([ComponentResult(connected_component_num=0, synchronous_component_num=0, status=CONVERGED, status_text=Converged, iteration_count=5, reference_bus_id='VL-4705_9', slack_bus_results=[SlackBusResult(id='VL-4705_9', active_power_mismatch=0.27900971511982675)], distributed_active_power=-17.119220681265524)], + demo
+   + Load flow on network 'case6515rte'
+      + Network CC0 SC0
+         + Network info
+            Network has 6515 buses and 9037 branches
+            Network balance: active generation=110090.12000000001 MW, active load=107263.99999999999 MW, reactive generation=0.0 MVar, reactive load=17413.799999999977 MVar
+            Angle reference bus: VL-4705_9
+            Slack bus: VL-4705_9
+         + Outer loop DistributedSlack
+            + Outer loop iteration 1
+               Slack bus active power (-17.119220681265634 MW) distributed in 2 distribution iteration(s)
+         Outer loop VoltageMonitoring
+         Outer loop DistributedSlack
+         Outer loop VoltageMonitoring
+         AC load flow completed successfully (solverStatus=CONVERGED, outerloopStatus=STABLE)
+)</code></pre>
+</div>
+</div>
+<div id="133a927e" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>network_explorer(rte_6515, sld_parameters<span class="op">=</span>sld_parameters, depth<span class="op">=</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="77">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"e468b3830cd342e7842bd572a2ec0e70","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+<!-- -->
+
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Test Grids Used in This Tutorial"</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Hands-On Power System Analysis with PyPowSyBl"</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 3</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-location: left</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: false</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co">    embed-resources: false</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co">    page-layout: full</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: cosmo</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="co">    highlight-style: github</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="co">    mainfont: Inter</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="co">    css: docs-fonts.css</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> helpers <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>Throughout this tutorial, we work with several **publicly available** test grids of varying size and complexity. This section introduces each one, loads it into PyPowSyBl, runs a quick power flow to verify it works, and provides an interactive single-line diagram for exploration.</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>These grids cover a range of real-world modelling scenarios — from a small didactic 6-bus network to a 6,500-bus French transmission grid — so you can observe how PyPowSyBl scales across different use cases.</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## PowSyBl 6-Bus Metrix Network</span></span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>This is a small **synthetic network** built into PowSyBl for testing purposes. It has 6 buses, 2 HVDC links, and multiple generators with active power control extensions. Its compact size makes it ideal for quick experiments and understanding basic concepts (slack distribution, HVDC modelling, electrical islands).</span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the 6-bus Metrix tutorial network (built into PowSyBl)</span></span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a>net_six_buses <span class="op">=</span> get_six_buses()</span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>lf_result <span class="op">=</span> run_lf(net_six_buses)</span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lf_result)</span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a>Use the interactive diagram below to explore the network topology. You can click on voltage levels, zoom in/out, and inspect individual elements:</span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a>network_explorer(net_six_buses, sld_parameters<span class="op">=</span>sld_parameters, depth<span class="op">=</span><span class="dv">6</span>)</span>
+<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## ENTSO-E CGMES MicroGrid T4</span></span>
+<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a>The **MicroGrid Test Configuration T4** is a standard test case published by ENTSO-E as part of the CGMES (Common Grid Model Exchange Standard) conformity assessment. It represents a small cross-border network with **Belgium** and **Netherlands** areas, including:</span>
+<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Multiple voltage levels (110 kV, 220 kV, 380 kV)</span>
+<span id="cb16-65"><a href="#cb16-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AC lines and transformers (2-winding and 3-winding)</span>
+<span id="cb16-66"><a href="#cb16-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Generators, loads, shunt compensators, SVCs</span>
+<span id="cb16-67"><a href="#cb16-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Phase and ratio tap changers</span>
+<span id="cb16-68"><a href="#cb16-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>HVDC VSC converter stations</span>
+<span id="cb16-69"><a href="#cb16-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-70"><a href="#cb16-70" aria-hidden="true" tabindex="-1"></a>This is our **primary test grid** throughout the load flow tutorial — small enough to run instantly, yet rich enough to demonstrate all PowSyBl features.</span>
+<span id="cb16-71"><a href="#cb16-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-74"><a href="#cb16-74" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb16-75"><a href="#cb16-75" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb16-76"><a href="#cb16-76" aria-hidden="true" tabindex="-1"></a>net_microgrid_t4 <span class="op">=</span> get_microgrid_t4()</span>
+<span id="cb16-77"><a href="#cb16-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-78"><a href="#cb16-78" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substation count:"</span>, <span class="bu">len</span>(net_microgrid_t4.get_substations()))</span>
+<span id="cb16-79"><a href="#cb16-79" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Voltage level count:"</span>, <span class="bu">len</span>(net_microgrid_t4.get_voltage_levels()))</span>
+<span id="cb16-80"><a href="#cb16-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-81"><a href="#cb16-81" aria-hidden="true" tabindex="-1"></a>lf_result <span class="op">=</span> run_lf(net_microgrid_t4)</span>
+<span id="cb16-82"><a href="#cb16-82" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lf_result)</span>
+<span id="cb16-83"><a href="#cb16-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-84"><a href="#cb16-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-87"><a href="#cb16-87" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb16-88"><a href="#cb16-88" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb16-89"><a href="#cb16-89" aria-hidden="true" tabindex="-1"></a>network_explorer(net_microgrid_t4, sld_parameters<span class="op">=</span>sld_parameters, depth<span class="op">=</span><span class="dv">6</span>)</span>
+<span id="cb16-90"><a href="#cb16-90" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-91"><a href="#cb16-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-92"><a href="#cb16-92" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb16-93"><a href="#cb16-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-94"><a href="#cb16-94" aria-hidden="true" tabindex="-1"></a><span class="fu">## ENTSO-E CGMES Real Grid Test Configuration</span></span>
+<span id="cb16-95"><a href="#cb16-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-96"><a href="#cb16-96" aria-hidden="true" tabindex="-1"></a>This is a **larger CGMES test grid** published by ENTSO-E. Unlike the MicroGrid, it includes more substations and voltage levels, providing a more realistic representation of interconnected transmission systems. We load it with geographical import post-processing to enable map-based visualization.</span>
+<span id="cb16-97"><a href="#cb16-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-100"><a href="#cb16-100" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb16-101"><a href="#cb16-101" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb16-102"><a href="#cb16-102" aria-hidden="true" tabindex="-1"></a>net_realgrid <span class="op">=</span> get_realgrid()</span>
+<span id="cb16-103"><a href="#cb16-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-104"><a href="#cb16-104" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substations:"</span>, <span class="bu">len</span>(net_realgrid.get_substations()))</span>
+<span id="cb16-105"><a href="#cb16-105" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Voltage levels:"</span>, <span class="bu">len</span>(net_realgrid.get_voltage_levels()))</span>
+<span id="cb16-106"><a href="#cb16-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-107"><a href="#cb16-107" aria-hidden="true" tabindex="-1"></a>lf_result <span class="op">=</span> run_lf(net_realgrid, use_reactive_limits<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb16-108"><a href="#cb16-108" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lf_result)</span>
+<span id="cb16-109"><a href="#cb16-109" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-110"><a href="#cb16-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-113"><a href="#cb16-113" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb16-114"><a href="#cb16-114" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb16-115"><a href="#cb16-115" aria-hidden="true" tabindex="-1"></a>network_explorer(net_realgrid, sld_parameters<span class="op">=</span>sld_parameters, vl_id<span class="op">=</span><span class="st">"103127774_VL"</span>)</span>
+<span id="cb16-116"><a href="#cb16-116" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-117"><a href="#cb16-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-118"><a href="#cb16-118" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb16-119"><a href="#cb16-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-120"><a href="#cb16-120" aria-hidden="true" tabindex="-1"></a><span class="fu">## ReliCapGrid Belgovia</span></span>
+<span id="cb16-121"><a href="#cb16-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-122"><a href="#cb16-122" aria-hidden="true" tabindex="-1"></a>**ReliCapGrid** is a realistic synthetic grid developed by the GridFM consortium for benchmarking reliability and capacity assessment tools. The **Belgovia IGM** (Individual Grid Model) represents a fictional country's transmission network in the CIM-CGMES format, complete with boundary data (BDS).</span>
+<span id="cb16-123"><a href="#cb16-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-124"><a href="#cb16-124" aria-hidden="true" tabindex="-1"></a>This grid demonstrates PyPowSyBl's ability to load CGMES Instance Files (XML) with separate boundary definitions — exactly how production-grade TSO data is exchanged in Europe via the ENTSO-E Operational Planning Data Environment (OPDE).</span>
+<span id="cb16-125"><a href="#cb16-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-128"><a href="#cb16-128" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb16-129"><a href="#cb16-129" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb16-130"><a href="#cb16-130" aria-hidden="true" tabindex="-1"></a>igm_belgovia <span class="op">=</span> get_relicapgrid_belgovia()</span>
+<span id="cb16-131"><a href="#cb16-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-132"><a href="#cb16-132" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substations:"</span>, <span class="bu">len</span>(igm_belgovia.get_substations()))</span>
+<span id="cb16-133"><a href="#cb16-133" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Voltage levels:"</span>, <span class="bu">len</span>(igm_belgovia.get_voltage_levels()))</span>
+<span id="cb16-134"><a href="#cb16-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-135"><a href="#cb16-135" aria-hidden="true" tabindex="-1"></a>lf_result <span class="op">=</span> run_lf(igm_belgovia)</span>
+<span id="cb16-136"><a href="#cb16-136" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lf_result)</span>
+<span id="cb16-137"><a href="#cb16-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-138"><a href="#cb16-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-141"><a href="#cb16-141" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb16-142"><a href="#cb16-142" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb16-143"><a href="#cb16-143" aria-hidden="true" tabindex="-1"></a>network_explorer(igm_belgovia, sld_parameters<span class="op">=</span>sld_parameters, depth<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb16-144"><a href="#cb16-144" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-145"><a href="#cb16-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-146"><a href="#cb16-146" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb16-147"><a href="#cb16-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-148"><a href="#cb16-148" aria-hidden="true" tabindex="-1"></a><span class="fu">## RTE 6515-Bus Network</span></span>
+<span id="cb16-149"><a href="#cb16-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-150"><a href="#cb16-150" aria-hidden="true" tabindex="-1"></a>This is a **large-scale Matpower test case** representing a snapshot of the French RTE (Réseau de Transport d'Électricité) transmission grid with **6,515 buses**. It is loaded from a <span class="in">`.mat`</span> file and includes phase tap changers that require a small fix (zeroing out the alpha at the current tap position) to avoid numerical issues.</span>
+<span id="cb16-151"><a href="#cb16-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-152"><a href="#cb16-152" aria-hidden="true" tabindex="-1"></a>We use this grid in the load flow tutorial to benchmark solver performance (Newton-Raphson vs Newton-Krylov) on a realistically sized network.</span>
+<span id="cb16-153"><a href="#cb16-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-156"><a href="#cb16-156" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb16-157"><a href="#cb16-157" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb16-158"><a href="#cb16-158" aria-hidden="true" tabindex="-1"></a>rte_6515 <span class="op">=</span> get_rte_6515()</span>
+<span id="cb16-159"><a href="#cb16-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-160"><a href="#cb16-160" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substations:"</span>, <span class="bu">len</span>(rte_6515.get_substations()))</span>
+<span id="cb16-161"><a href="#cb16-161" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Voltage levels:"</span>, <span class="bu">len</span>(rte_6515.get_voltage_levels()))</span>
+<span id="cb16-162"><a href="#cb16-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-163"><a href="#cb16-163" aria-hidden="true" tabindex="-1"></a>lf_result <span class="op">=</span> run_lf(</span>
+<span id="cb16-164"><a href="#cb16-164" aria-hidden="true" tabindex="-1"></a>  rte_6515,</span>
+<span id="cb16-165"><a href="#cb16-165" aria-hidden="true" tabindex="-1"></a>  use_reactive_limits<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb16-166"><a href="#cb16-166" aria-hidden="true" tabindex="-1"></a>  use_defaults<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb16-167"><a href="#cb16-167" aria-hidden="true" tabindex="-1"></a>  component_mode<span class="op">=</span>lf.ComponentMode.MAIN_CONNECTED</span>
+<span id="cb16-168"><a href="#cb16-168" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-169"><a href="#cb16-169" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lf_result)</span>
+<span id="cb16-170"><a href="#cb16-170" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-171"><a href="#cb16-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-174"><a href="#cb16-174" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb16-175"><a href="#cb16-175" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb16-176"><a href="#cb16-176" aria-hidden="true" tabindex="-1"></a>network_explorer(rte_6515, sld_parameters<span class="op">=</span>sld_parameters, depth<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb16-177"><a href="#cb16-177" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
